@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Button Clicker</title>
+  </head>
+  <body>
+    <!-- main container  -->
+    <div class="main-container">
+      <!-- start of navbar -->
+      <div class="nav-bar">
+        <h1>Dojonary</h1>
+        <input type="text" placeholder="Search.." />
+        <button id="logButton" onclick="logButton(this)">Login</button>
+      </div>
+      <!-- end of nav bar -->
+      <!-- inner container -->
+      <div class="inner-container">
+        <!-- start of left in the inner container -->
+        <div class="left">
+          <div class="dojonary-container">
+            <div class="first">
+              <div class="words">
+                <h1>Ninja</h1>
+                <i class="bold">noun</i>
+                <p>Plural:<i> ninjas</i></p>
+              </div>
+              <button id="like1" value="13" onclick="likeButton(this)">
+                00 likes
+              </button>
+            </div>
+            <div class="second">
+              <p>
+                A practitioner skilled in the &nbsp;<a href="#"> Japanese </a>
+                &nbsp; art &nbsp;
+                <a a href="#"> ninjutsu</a>
+              </p>
+            </div>
+          </div>
+          <div class="dojonary-container">
+            <div class="first">
+              <div class="words">
+                <h1>Ninja</h1>
+                <i class="bold">noun</i>
+                <p>Plural:<i> ninjas</i></p>
+              </div>
+              <button id="like2" value="37" onclick="likeButton(this)">
+                00 likes
+              </button>
+            </div>
+            <div class="second">
+              <p>
+                A &nbsp;<a href="#">programmer</a>&nbsp; who breaks down
+                problems with &nbsp; <a href="#">zen</a>-like focus
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- end of left in the inner container -->
+        <!-- start of right in the inner container -->
+        <div class="right">
+          <div class="text">
+            <p>Dojonary is</p>
+            <p>define by &nbsp;<b>You</b></p>
+          </div>
+          <button id="dojonary" onclick="removeButton(this)">
+            Add Definition
+          </button>
+        </div>
+        <!-- end of right in the inner container -->
+      </div>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
