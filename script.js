@@ -6,43 +6,50 @@ var buttonArray = [];
 // gets called at the bottom loop to create a new item in likes array
 function createLikes(name, likes) {
   document.getElementById(name).innerHTML = likes + " likes";
+  var isLiked = false;
 
   return {
     name,
     likes,
+    isLiked,
   };
 }
 
 // button call
-
-var isLiked = false;
 
 changeColor = "rgb(" + 147 + ", " + 196 + "," + 125 + ")";
 changeBackColor = "rgb(" + 255 + ", " + 217 + "," + 102 + ")";
 
 function likeButton(idName) {
   for (var i = 0; i < likesArrays.length; i++) {
-    if (isLiked == false) {
-      if (idName.id == likesArrays[i].name) {
+    if (idName.id == likesArrays[i].name) {
+      console.log("names are true");
+      if (likesArrays[i].isLiked == false) {
+        console.log("is like is showing false");
         likesArrays[i].likes++;
+        console.log(likesArrays[i].likes);
         idName.innerHTML = likesArrays[i].likes + " likes";
         document.getElementById(likesArrays[i].name).style.backgroundColor =
           changeColor;
         alert("Ninja was liked");
-        isLiked = true;
+        likesArrays[i].isLiked = true;
+        return;
       }
-    } else if (isLiked == true) {
-      if (idName.id == likesArrays[i].name) {
+
+      if (likesArrays[i].isLiked == true) {
+        console.log("is like is showing true");
         likesArrays[i].likes--;
+        console.log(likesArrays[i].likes);
         idName.innerHTML = likesArrays[i].likes + " likes";
         document.getElementById(likesArrays[i].name).style.backgroundColor =
           changeBackColor;
-        isLiked = false;
+        likesArrays[i].isLiked = false;
         return;
       }
     }
   }
 }
+
 // Finds all buttons in the document and store this in a temporary variable.
 var buttons = document.getElementsByTagName("BUTTON");
 
